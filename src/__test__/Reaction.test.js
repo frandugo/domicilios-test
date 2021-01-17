@@ -10,13 +10,6 @@ configure({
   adapter: new Adapter()
 })
 
-function WrappingComponentMyContextProvider(props) {
-    const { children, myContextValue } = props;
-    return (
-      <actionsCounter.Provider value={myContextValue}>{children}</actionsCounter.Provider>
-    );
-}
-
 describe('<Reactions/> Component', () => {
 
     function MyComponentWithContextNamedExport(props) {

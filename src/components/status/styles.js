@@ -1,7 +1,12 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { mainColor, whiteColor, greyColor, greyDarkColor, darkColor, blackColor } from '../../styles/colors'
 
+const animateFadeIn = keyframes`
+ 0% { opacity: 0; }
+ 100% { opacity: 1; }
+`
 export const StatusItemElement = styled.div`
+    animation: ${ animateFadeIn } 0.7s;
     background: ${ whiteColor };
     box-shadow: 0 0 1px 1px ${ greyColor };
     margin-bottom: 1.5rem;
@@ -92,6 +97,7 @@ export const FormStatusElement = styled.div`
 
 export const StatusCounterElement = styled.div`
     align-items: center;
+    animation: ${ animateFadeIn } 0.7s;
     border-top: 1px solid ${ greyColor };
     display: flex;
     justify-content: space-between;

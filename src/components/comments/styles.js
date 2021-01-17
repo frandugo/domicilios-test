@@ -1,5 +1,10 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import {  mainColor, whiteColor, greyColor, greyWhiteColor, greyDarkColor, darkColor } from '../../styles/colors'
+
+const animateFadeIn = keyframes`
+ 0% { opacity: 0; }
+ 100% { opacity: 1; }
+`
 
 export const CommentContainer = styled.div`
     background: ${ greyWhiteColor };
@@ -9,6 +14,7 @@ export const CommentContainer = styled.div`
 `
 
 export const FormCommentElement = styled.div`
+    animation: ${ animateFadeIn } 0.7s;
     background: ${ whiteColor };
     box-shadow: 0 0 1px 1px ${ greyColor };
     textarea{
@@ -31,6 +37,7 @@ export const FormCommentElement = styled.div`
 `
 
 export const CommentItemElement = styled.div`
+    animation: ${ animateFadeIn } 0.7s;
     padding: 0.2rem;
     .comment{
         display: grid;

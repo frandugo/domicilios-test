@@ -6,6 +6,17 @@ const animateFadeIn = keyframes`
  100% { opacity: 1; bottom: -50px }
 `
 
+const animateIcon = keyframes`
+    0% { 
+        opacity: 0;
+        top: -100%;  
+    }
+    100% { 
+        opacity: 1;
+        top: 0;
+    }
+`
+
 export const ReactionElement = styled.div`
     animation: ${ animateFadeIn } 0.8s;
     background: ${ whiteColor };
@@ -25,19 +36,24 @@ export const ReactionElement = styled.div`
         height: 31px;
         line-height: 31px;
         outline: none;
+        position: relative;
         text-align: center;
         transition: background 0.2s ease-out;
+        top: 0;
         width: 31px;
         &:first-child{ margin: 0; }
         &--like{
+            animation: ${ animateIcon } 0.4s;
             background: #2F86FC;
             &:hover{ background: #2973D8 }
         }
         &--dislike{
+            animation: ${ animateIcon } 0.6s;
             background: #FE5858;
             &:hover{ background: #C73131 }
         }
         &--happy{
+            animation: ${ animateIcon } 0.8s;
             background: #FFC036;
             &:hover{ background: #D79C1D }
         }
