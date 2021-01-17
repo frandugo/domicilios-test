@@ -1,0 +1,9 @@
+export const mainColor = '#52C799';
+export const secondColor = '#00CE75';
+export const secondColorHover = '#01A860';
+export const greyWhiteColor = '#F6F6F6';
+export const whiteColor = '#FFFFFF';
+export const greyColor = '#EEEEEE';
+export const greyDarkColor = '#999999';
+export const darkColor = '#666666';
+export const blackColor = '#333333';
