@@ -1,11 +1,17 @@
-import styled from 'styled-components'
-import { mainColor, whiteColor, greyColor, greyDarkColor, darkColor, blackColor } from '../../styles/colors'
+import styled, { keyframes } from 'styled-components'
+import { whiteColor, greyColor } from '../../styles/colors'
+
+const animateFadeIn = keyframes`
+ 0% { opacity: 0; bottom: 0 }
+ 100% { opacity: 1; bottom: -50px }
+`
 
 export const ReactionElement = styled.div`
+    animation: ${ animateFadeIn } 0.8s;
     background: ${ whiteColor };
     box-shadow: 0 0 2px 2px ${ greyColor };
     border-radius: 30px;
-    bottom: -60px;
+    bottom: -50px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 7px;
